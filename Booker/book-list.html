@@ -1,0 +1,122 @@
+
+
+<!DOCTYPE html>
+<html lang="et">
+    <head>
+         <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+        <title>Raamatute nimekiri</title>
+    </head>
+    <body>
+        <header>
+            <!-- Fixed navbar -->
+            <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+              <a class="navbar-brand" href="#">Booker</a>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav mr-auto">
+                     <li class="nav-item">
+                    <a class="nav-link" href="book-add.html">Raamatute lisamine</a>
+                  </li>
+                  <li class="nav-item active">
+                    <a class="nav-link" href="book-list.html">Raamatute nimekiri <span class="sr-only">(current)</span></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="author-add.html">Autorite lisamine</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link disabled" href="author-list.html">Autorite nimekiri</a>
+                  </li>
+               
+                 
+                </ul>
+           
+              </div>
+            </nav>
+          </header>
+
+          <main role="main" class="container" style="padding-top: 60px;">
+
+
+
+
+            
+
+            <h1 >Raamatute arhiiv</h1> 
+         
+            <table class="table-striped border-success"> 
+              <thead> 
+                <tr> 
+                  <th data-field="title" style="width: auto;"> 
+                    <span class="text-primary"> 
+                      Title 
+                    </span> 
+                  </th> 
+                  <th data-field="author"> 
+                    <span class="text-primary"> 
+                      Author  
+                    </span> 
+                  </th> 
+                  <th data-field="description"> 
+                    <span class="text-primary">  
+                      Description  
+                    </span> 
+                  </th> 
+                </tr> 
+              </thead> 
+            </table> 
+          </main>
+        <footer class="footer">
+            <div class="container">
+              <span class="text-muted">Fred Oja, 2021 Kevad semester</span>
+            </div>
+            <div class="col-md-12 text-center">
+                          <a class="btn btn-primary btn-lg"  href="books.json" role="button">Books</a>
+                          </div>>
+
+          </footer>
+
+
+  <!-- Include jQuery and other required files for Bootstrap -->
+  <script src= 
+"https://code.jquery.com/jquery-3.3.1.min.js"> 
+  </script> 
+  <script src= 
+"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"> 
+  </script> 
+  <script src= 
+"https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"> 
+  </script> 
+  
+  <!-- Include the JavaScript file for Bootstrap table -->
+  <script src= 
+"https://unpkg.com/bootstrap-table@1.16.0/dist/bootstrap-table.min.js"> 
+  </script> 
+  
+  <!-- Include the file where the JSON data is stored -->
+  <script type="text/javascript" 
+          src="books.json"> 
+  </script> 
+  <script type="text/javascript"> 
+    $(document).ready(function () { 
+      // Use the given data to create  
+      // the table and display it 
+      $('table').bootstrapTable({ 
+        data: mydata 
+      }); 
+    }); 
+    // Parse the imported data as JSON 
+    // and store it 
+    var mydata = JSON.parse(da) 
+  </script> 
+  
+  
+  </body>
+</html>
