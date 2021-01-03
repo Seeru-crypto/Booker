@@ -16,26 +16,24 @@
         <header>
             <!-- Fixed navbar -->
             <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-              <a class="navbar-brand" href="#">Fixed navbar</a>
+              <a class="navbar-brand" href="#">Booker</a>
               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
               <div class="collapse navbar-collapse" id="navbarCollapse">
                 <ul class="navbar-nav mr-auto">
                      <li class="nav-item">
-                    <a class="nav-link disabled" href="book-add.html">Raamatute lisamine</a>
+                    <a class="nav-link" href="book-add.html">Raamatute lisamine</a>
                   </li>
-                  <li class="nav-item active">
+                  <li class="nav-item">
                     <a class="nav-link" href="book-list.html">Raamatute nimekiri <span class="sr-only">(current)</span></a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link disabled" href="author-add.html">Autorite lisamine</a>
+                    <a class="nav-link" href="author-add.html">Autorite lisamine</a>
                   </li>
-                  <li class="nav-item">
-                    <a class="nav-link disabled" href="author-list.html">Autorite nimekiri</a>
+                  <li class="nav-item active">
+                    <a class="nav-link" href="author-list.html">Autorite nimekiri</a>
                   </li>
-               
-                 
                 </ul>
            
               </div>
@@ -43,32 +41,85 @@
           </header>
 
           <main role="main" class="container" style="padding-top: 60px;">
-            <h1 class="mt-5">Sticky footer with fixed navbar</h1>
-            <p class="lead">Pin a fixed-height footer to the bottom of the viewport in desktop browsers with this custom HTML and CSS. A fixed navbar has been added with <code>padding-top: 60px;</code> on the <code>body &gt; .container</code>.</p>
+            
+            <h1 style="padding-top: 60px;">Autorite nimekiri</h1> 
+         
+            <table class="table-striped border-success"> 
+              <thead> 
+                <tr> 
+                  <th data-field="firstName" style="width: auto;"> 
+                    <span class="text-primary"> 
+                      Eesnimi 
+                    </span> 
+                  </th> 
+                  <th data-field="lastName"> 
+                    <span class="text-primary"> 
+                      Perekonnnanimi  
+                    </span> 
+                  </th> 
+                  <th data-field="rating"> 
+                    <span class="text-primary">  
+                      Hinnang  
+                    </span> 
+                  </th> 
+                </tr> 
+              </thead> 
+            </table> 
+         
+         
+         
+         
           </main>
 
 
 
 
-        Raamatu lisamise vormi leht (nt. book-add.html) 
     
-        <p>- Menüü nelja lingiga. Sama kõigil lehtedel. </p>
-            <p>- Lehel on samad elemendid, mis näidisel. Autorite valikus on mõned näidisandmed.</p>
-                <p>- Jalus</p>
 
 
 
 
-        <footer class="footer">
+          <footer class="footer">
             <div class="container">
-              <span class="text-muted">See on lehekülje jalus</span>
+              <span class="text-muted">Fred Oja, 2021 Kevad semester</span>
             </div>
+            <div class="col-md-12 text-center">
+                          <a class="btn btn-primary btn-lg"  href="authors.json" role="button">Autorid</a>
+                          </div>>
+
           </footer>
 
 
 
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+      
+
+  <!-- Include jQuery and other required files for Bootstrap -->
+  <script src= 
+  "https://code.jquery.com/jquery-3.3.1.min.js"> 
+    </script> 
+    <script src= 
+  "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"> 
+    </script> 
+    <script src= 
+  "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"> 
+    </script> 
+    
+    <!-- Include the JavaScript file for Bootstrap table -->
+    <script src= 
+  "https://unpkg.com/bootstrap-table@1.16.0/dist/bootstrap-table.min.js"> 
+    </script> 
+    
+
+
+
+    <script type="text/javascript" 
+            src="authors.json"> 
+    </script> 
+   
+<script  type="text/javascript"
+         src="readJSON.js">  
+</script> 
+
+
     </body>
 </html>

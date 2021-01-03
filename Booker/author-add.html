@@ -32,7 +32,7 @@
                     <a class="nav-link" href="author-add.html">Autorite lisamine</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link disabled" href="author-list.html">Autorite nimekiri</a>
+                    <a class="nav-link" href="author-list.html">Autorite nimekiri</a>
                   </li>
                
                  
@@ -43,25 +43,55 @@
           </header>
 
           <main role="main" class="container" style="padding-top: 60px;">
-            <h1 class="mt-5">Sticky footer with fixed navbar</h1>
-            <p class="lead">Pin a fixed-height footer to the bottom of the viewport in desktop browsers with this custom HTML and CSS. A fixed navbar has been added with <code>padding-top: 60px;</code> on the <code>body &gt; .container</code>.</p>
+          
+          
+            <h4 class="mb-3" style="padding-top: 60px;">Autori lisamine</h4>
+<!--Autori eesnimi ja perenimi  -->
+
+              <div class="col-md-6 mb-3">
+                <label for="firstName">Eesnimi</label>
+                <input type="text" class="form-control" id="firstName" placeholder="" value="" required="">
+                <div class="invalid-feedback">
+                  Palun sisestage kehtiv eesnimi.
+                </div>
+              </div>
+              <div class="col-md-6 mb-3">
+                <label for="lastName">Perenimi</label>
+                <input type="text" class="form-control" id="lastName" placeholder="" value="" required="">
+                <div class="invalid-feedback">
+                  Palun sisestage kehtiv perekonnanimi.
+                </div>
+              </div>
+
+<!--Autori hinnangu   -->
+            <div class="col-md-2 mb-3" data-children-count="1">
+              <label for="readState">Hinnang</label>
+              <select class="custom-select d-block w-30" id="state" required="">
+                <option value="">1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+              </select>
+              <div class="invalid-feedback">
+                Viga
+              </div>
+            </div>
+          
+          
+          
+            <div class="col-md-12 text-center">
+              <a class="btn btn-primary btn-lg"  href="#" role="button">Lisa autor</a>
+              </div>
+          
           </main>
 
 
 
 
-        Raamatu lisamise vormi leht (nt. book-add.html) 
-    
-        <p>- Menüü nelja lingiga. Sama kõigil lehtedel. </p>
-            <p>- Lehel on samad elemendid, mis näidisel. Autorite valikus on mõned näidisandmed.</p>
-                <p>- Jalus</p>
-
-
-
-
-        <footer class="footer">
+          <footer class="footer">
             <div class="container">
-              <span class="text-muted">See on lehekülje jalus</span>
+              <span class="text-muted">Fred Oja, 2021 Kevad semester</span>
             </div>
           </footer>
 
