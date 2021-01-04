@@ -16,34 +16,35 @@
         <header>
             <!-- Fixed navbar -->
             <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-              <a class="navbar-brand" href="https://trello.com/b/cKOhh9na/booker">Booker</a>
+              <a class="navbar-brand" href="#">Booker</a>
               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
               <div class="collapse navbar-collapse" id="navbarCollapse">
                 <ul class="navbar-nav mr-auto">
-                     <li class="nav-item active">
-                    <a class="nav-link" href="book-add.html">Raamatute lisamine<span class="sr-only">(current)</span></a>
+               
+                  <li class="nav-item active">
+                    <a class="nav-link" href="book-list.html">Raamatud <span class="sr-only">(current)</span></a>
                   </li>
+           
                   <li class="nav-item">
-                    <a class="nav-link" href="book-list.html">Raamatute nimekiri</a>
+                    <a class="nav-link" href="author-list.html">Autorid</a>
                   </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="author-add.html">Autorite lisamine</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="author-list.html">Autorite nimekiri</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="index.html">Index</a>
-                  </li>
-
                
                  
                 </ul>
            
               </div>
             </nav>
+                        <!-- Sub navbar -->
+                        <div class="nav-scroller bg-secondary text-white box-shadow" style="padding-top: 55px;">
+                          <nav class="nav nav-underline">
+                            <a class="nav-link text-white" href="#">Import (Excel/ CSV)</a>
+                            <a class="nav-link text-white" href="#">Export</a>
+                            <a class="nav-link text-white" href="book-add.html">Lisa raamat</a>
+                          </nav>
+                        </div>
+            
           </header>
 
           <main role="main" class="container" style="padding-top: 60px;">
@@ -52,7 +53,7 @@
             <p class="lead">Täname!</p>
 
                    <div class="mb-3" data-children-count="1">
-                <label for="email">Raamatu nimi</label>
+                <label for="BookName"><h6>Raamatu nimi</h6></label>
                 <input type="email" class="form-control" id="email" placeholder="Alice imedemaal" data-kwimpalastatus="alive" data-kwimpalaid="1609581989403-7">
                 <div class="invalid-feedback">
                   Please enter a valid email address for shipping updates.
@@ -61,7 +62,7 @@
        
             <div class="row">
                 <div class="col-md-6 mb-3" data-children-count="1">
-                  <label for="firstName">Autor 1</label>
+                  <label for="firstName"><h6>Autor 1 </h6></label>
                     <select class="custom-select d-block w-30" id="Author1" required="">
                         <option value="">...</option>
                         <option>Trudy Canavan</option>
@@ -87,49 +88,43 @@
               </div>              </div>
             
 
+              <div class="form-inline">
 
-              <div class="row">
-              <h4 class="mb-3">Hinnang</h4>
-              <div class="d-block col-md-3 my-3" style="padding-top: 10px;">
-                <div class="custom-control custom-radio" data-children-count="1">
-                  <input id="Rating1" name="BookRating" type="radio" class="custom-control-input" checked="" required="">
-                  <label class="custom-control-label" for="Rating1">1</label></div> 
-
-                <div class="custom-control custom-radio" data-children-count="1">
-                  <input id="Rating2" name="BookRating" type="radio" class="custom-control-input" required="">
-                  <label class="custom-control-label" for="Rating2">2</label></div>
-
-                <div class="custom-control custom-radio" data-children-count="1">
-                  <input id="Rating3" name="BookRating" type="radio" class="custom-control-input" required="">
-                  <label class="custom-control-label" for="Rating3">3</label>
-                </div>
-                <div class="custom-control custom-radio" data-children-count="1">
-                <input id="Rating4" name="BookRating" type="radio" class="custom-control-input" required="">
-                <label class="custom-control-label" for="Rating4">4</label></div>
-
-                <div class="custom-control custom-radio" data-children-count="1">
-                <input id="Rating5" name="BookRating" type="radio" class="custom-control-input" required="">
-                <label class="custom-control-label" for="Rating5">5</label></div>
-
+<h6>Hinnang: </h6>                <div class="col-2">
+          
+<!--Autori hinnangu   -->
+<div class="md-2 mb-3" data-children-count="1">
+  <select class="custom-select d-block w-30" id="state" placeholder="Hinnang" required="">
+    <option value="">1</option>
+    <option>2</option>
+    <option>3</option>
+    <option>4</option>
+    <option>5</option>
+  </select>
+  <div class="invalid-feedback">
+    Viga
+  </div>
+</div>
+</div>
               </div>
 
              
 
-         
-
-
-              <div class="col-md-2 mb-3" data-children-count="1">
-                <label for="readState">Loetud<span class="text-muted" data-children-count="0">(valikuline)</span></label>
-                <select class="custom-select d-block w-30" id="state" required="">
-                  <option value="">Ei</option>
-                  <option>Jah</option>
-                </select>
-                <div class="invalid-feedback">
-                  Viga
-                </div>
+         <div style="padding-bottom: 30px;" class="form-inline">
+              <div class="form-check">
+                 <label class="form-check-label" style="padding-right: 10px;" for="defaultCheck1">
+                  <h6 style="padding-top:5px">Loetud: </h6>
+                </label>
+                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+               
               </div>
-   </div>
+
+ </div>
+
+
+  <div class="col-auto">
               <button class="btn btn-primary btn-lg btn-block" type="submit">Lisa raamat</button>
+  </div>
             </main>
 
 
