@@ -1,0 +1,161 @@
+Php
+
+Ülesannete kood asub aadressil https://bitbucket.org/mkalmo/icd0007exphp.
+
+Avage ülesannete kood IDE-s (nt. PhpStorm).
+
+1. Kirjutage kood, mis loeb mitu korda esineb number (mitte sõne) 3 
+   $numbers listis ja väljastab tulemuse kujul "found it <mitu korda> times".
+   Ärge kasutage olemasolevaid funktsioone vaid kirjutage kood ise (for tsükkel).
+
+2. Kirjutage funktsioon isInList($list, $elementToBeFound), mis ütleb kas 
+   listis on selline element või mitte.
+   Ärge kasutage olemasolevaid funktsioone vaid kirjutage kood ise (for tsükkel).
+
+   isInList([1, 2, 3], 2) tagastab true;
+   isInList([1, 2, 3], 4) tagastab false;
+
+   NB! Kui Php-st printida väär väärtus (false), siis ei ole väljundist midagi näha.
+   
+   print(false);     // tulemust pole välundist näha
+   var_dump(false);  // trükitakse bool(false)
+
+3. Kirjutage funktsioon, mis võtab argumendiks numbrite listi ja tagastab 
+   listi, milles on esialgse listi paaritud arvud.
+   Ärge kasutage olemasolevaid funktsioone vaid kirjutage kood ise (for tsükkel).
+
+   getOddNumbers([1, 2, 3]) tagastab [1, 3]
+   
+   kontrollimaks, kas number on paaritu, saame kontrollida, kas kahega 
+   jagamisel jääb jääk. 4 % 2 on 0 ja 3 % 2 on 1.
+
+4. Kirjutage programm, mis käib läbi numbrid 1 kuni 15 ja väljastab järgmist:
+   - kui number jagub kolmega, väljasta "Fizz";
+   - kui number jagub viiega, väljasta "Buzz";
+   - kui number jagub kolmega ja viiega, väljasta "FizzBuzz";
+   - muudel juhtudel väljasta number ise.
+
+5. Kirjutage programm, mis võtab sisendiks listi ja tagastab stringi, 
+   milles on kõik elemendid komaga eraldatuna ning seejärel teeb 
+   stringist esialgse listi tagasi. Kasutage olemasolevaid funktsioone 
+   join() ja explode().
+   
+   [1, 2, 3] -> "1, 2, 3" -> [1, 2, 3]
+
+6. Failis data/grades.txt on ained ja saadud hinded. Tehke programm, 
+   mis loeb need andmed ja väljastab keskmise hinde.
+   
+   Stringi lõpust reavahetuse eemaldamiseks on funktsioon trim($string).
+   ja listi elementide arvu ütleb funktsioon count($list).
+
+7. Kirjutage kood, mis lisab faili data/grades.txt veel mõned kirjed.
+   Lisatavad andmed on failis ex7.php muutujas $additionalData;
+   Andmed peaks lisanduma samal kujul, nagu data/grades.txt failis 
+   juba mõned näitena on.
+
+8. Ülesande mõte on uurida, kuidas html vormilt andmed skriptini jõuavad.
+
+   Kataloogis "form" on html vorm ja php skript selle vormi sisu vastu 
+   võtmiseks.
+   
+   a) Käivitage server. Olles projekti juurkaustas andke käsk.
+   
+      > php -S localhost:8080 -t form   # serveerib faile alamkataloogist "form".
+
+   b) Laadige html vorm aadressilt http://localhost:8080/form.html.
+   
+   c) Täitke vorm ja vajutage "Submit". Avanev leht peaks näitama, mis 
+      info skripini jõudis.
+      
+   d) Muutke form tag-i method parameeter post-iks. Ja saatke vorm uuesti.
+      Jälgige kuidas käitumine erineb.
+   
+   e) Peatage server (Ctrl + c).
+   
+   f) Käivitage samas kataloogis olev python-i skript (minimaalne veebiserver).
+      Saatke vorm uuesti. Jälgige milline vahe on get ja post päringul.
+   
+      > python server.py   # skript lõpetab töö peale igat päringut.
+
+9. Ülesande mõte on demonstreerida erinevaid lehekülgede vahel liikumise 
+   viise. Veenduge, et saate aru kuidas need näited töötavad. Enda rakenduse 
+   tegemisel on teil samasugune valik ja sobiv valik lihtsustab edasist tööd 
+   oluliselt.
+   
+   Kui saate aru, kuidas erinevad viisid toimivad ja oskate hinnata, 
+   mis on ühe või teise viisi tugev või nõrk külg, siis oskate tõenäoliselt 
+   teha ka informeeritud valiku oma projekti jaoks.
+   
+   On väga reaalne, et hiljem selgub, et esialgu tehtud valik ei olnud 
+   kõige parem. See võiks väljenduda selles, et edasisi nõudeid on tülikas 
+   täita. Siis võite valikut uuesti kaaluda. Konkreetsete probleemide ilmnemiselt 
+   oskate kindlasti paremini hinnata, milline variant antud olukorras parim oleks.
+
+   a) Esimene näide on selle kohta, kuidas staatilisest html vormist 
+      saadetakse info php skriptile, mis annab vastuse lihttekstina 
+      (ilma html tag-ideta.)
+   
+      Käivitage veebiserver.
+
+      > php -S localhost:8080 -t flow   # serveerib faile alamkataloogist "flow".
+
+      Laadige html vorm aadressilt http://localhost:8080/calc.html.
+      Sisestage mingi väärtus ja vajutage "Calculate".
+      
+      Tehke nii, et vastus sisaldaks korrektset html-i.
+      
+   b) Teine näide on selle kohta, kuidas staatilisest html vormist 
+      saadetakse info php skriptile, teeb midagi ja delegeerib vastuse 
+      väljastamise edasisele aadressile. See edasine aadress võib olla 
+      nii html kui ka php fail.
+      
+      Laadige html vorm aadressilt http://localhost:8080/contact.html.
+      Sisestage mingid väärtused ja vajutage "Send".
+      
+      Jälgige mida trükitakse serveri konsooli.
+      
+   c) Kolmandas näites genereerib skript ise vormi ja võtab 
+      saadetud info vastu ka. Seega vorm saadetakse iseendale.
+   
+      Laadige vorm aadressilt http://localhost:8080/validate.php.
+      
+      Sisestage mõned tähed ja vajutage "Calculate".
+      
+      Sisestage mõned numbrid ja vajutage "Calculate".           
+
+   d) Neljandas näites otsustab skript, millist vaadet näidata.
+      See erinev variandist b) selle poolest, et ei toimu ümber suunamist 
+      vaid skript laheb ise vaate sisu ja väljastab selle.
+      
+      Antud viisil on meil võimalik skriptist vaatele ka infot saata 
+      (antud näites muutuja $dataFromParent).
+   
+      Laadige skript aadressilt http://localhost:8080/choose.php.
+      
+      Liikuge linkide vahel.
+
+10. Kataloogis "calc" on staatiline temperatuuri teisendamise rakenduse 
+    prototüüp.
+
+    Lisage rakendusel vajalik Php kood, et see võimaldaks teisendada 
+    temperatuuri Celsiuse ja Fahrenheiti skaala vahel.
+    
+    Arvutamise valemid on $temp * 9/5 + 32 ja ($temp - 32) / (9/5)
+    
+    Kui kasutaja ei sisesta numbrilist väärtust peaks rakendust näitama 
+    prototüübis toodud veateadet. Teksti saate numbriks muuta funktsiooniga 
+    intval(). Tulemuse ümardamiseks võite kasutada funktsiooni round().
+
+11. Projekti testide juures on testid ka eelmise ülesande testimiseks.
+    Täiendage rakendust allpool toodud infoga ja kontrollige, et see 
+    läbib testid.
+    
+    Testid leiate aadressilt https://bitbucket.org/mkalmo/icd0007tests.
+    Kloonige see projekt oma arvutisse. Antud ülesande kohta käib test 
+    nimega calc-test.php.
+    
+    Test eeldab, et rakendus on paigaldatud aadressile http://localhost:8080, 
+    menüü linkidel on id-d "c2f" ja "f2c" ning arvutamise nupul on id "calculateButton" 
+    ja temperatuuri sisestusvälja nimi on "temperature".
+   
+Seletused ja lahendused: https://youtu.be/cK6apt_UTpc
