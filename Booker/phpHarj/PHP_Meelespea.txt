@@ -29,3 +29,36 @@ function toFahrenheit($temp) {
  return $temp * 9 / 5 + 32;
 }
 > php calc.php #
+
+
+
+
+flow foldri alt on PHP kullamäed
+
+.Calc näitab kuidas andmeid saata ühest saidist teise, kasutades 
+PHP post meetodit
+
+
+.Contact näitab kuidas kasutada php meetodit ilma et viiks 
+teisele php saidile. 
+
+
+.Validate näitab kuidas teha teksti sisestus veakontrolli. 
+
+
+
+    COMMAND MILLEGA PHP SERVER KÄIMA PANNA LOKAALSELT
+        NB: Pead olema õiges directoris sees.
+            Lõpus flow viitab et kõik php failid mis flows on aktiveeri. 
+
+        "php -S localhost:8080 -t flow"
+
+
+
+
+Viimane choose.php näitab et saab salvestada andmeid PHP failis ning sõltuvalt
+vaatest neid näidata või mitte näidata. 
+    Näiteks salvestab muutuja $retseptid ka näitad seda ainult retseptide lehe peal. 
+
+
+    php -S localhost:8080 -t calc

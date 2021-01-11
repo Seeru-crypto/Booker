@@ -1,3 +1,5 @@
 math;5
 physics;4
 english;4
+history;5
+chemistry;2
