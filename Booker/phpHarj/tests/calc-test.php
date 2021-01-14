@@ -13,7 +13,8 @@ class CalcTests extends HwTests {
 
     function landingPageHasMenuWithCorrectLinks() {
         $this->get(BASE_URL);
-
+        //prindib välja lehekülje sisu
+            //print $this->getBrowser ()->getContent();
         $this->assertLinkById('c2f');
         $this->assertLinkById('f2c');
     }

@@ -17,7 +17,7 @@
     }
     else {
         $tempFarhenheit = c2f($temperature2);
-        $messageC2F = 'The inserted temperature in Fahrenheit is '.$tempFarhenheit;
+        $messageC2F = 'The inserted temperature in is '.$tempFarhenheit." decrees";
     }
 
 
@@ -38,7 +38,7 @@
     
 
     <nav>
-        <a href="c2f.html">Celsius to Fahrenheit</a> |
+        <a href="index.html">Celsius to Fahrenheit</a> |
         <a href="f2c.html">Fahrenheit to Celsius</a>
     </nav>
 

@@ -14,7 +14,7 @@ if (!empty($input) && !is_numeric($input)) {
     $messageF2C = 'Please enter a value';
 } else {
     $tempCelsius = round (f2c($temperature1));
-    $messageF2C = 'The inserted temperature in Celsius is '.$tempCelsius;
+    $messageF2C = 'The inserted temperature in Celsius is '.$tempCelsius. " decrees";
 }
 
 
@@ -36,7 +36,7 @@ function f2c ($temp){
 <body>
 
     <nav>
-        <a href="c2f.html">Celsius to Fahrenheit</a> |
+        <a href="index.html">Celsius to Fahrenheit</a> |
         <a href="f2c.html">Fahrenheit to Celsius</a>
     </nav>
 
