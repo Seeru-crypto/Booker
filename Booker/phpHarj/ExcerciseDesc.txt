@@ -146,7 +146,8 @@ Avage ülesannete kood IDE-s (nt. PhpStorm).
     prototüübis toodud veateadet. Teksti saate numbriks muuta funktsiooniga 
     intval(). Tulemuse ümardamiseks võite kasutada funktsiooni round().
 
-11. Projekti testide juures on testid ka eelmise ülesande testimiseks.
+11.   https://youtu.be/cK6apt_UTpc?t=5293
+ Projekti testide juures on testid ka eelmise ülesande testimiseks.
     Täiendage rakendust allpool toodud infoga ja kontrollige, et see 
     läbib testid.
     

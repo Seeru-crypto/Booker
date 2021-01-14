@@ -62,3 +62,20 @@ vaatest neid näidata või mitte näidata.
 
 
     php -S localhost:8080 -t calc
+
+
+  Stringi lõpust reavahetuse eemaldamiseks on funktsioon trim($string).
+   ja listi elementide arvu ütleb funktsioon count($list).
+
+NB! Kui Php-st printida väär väärtus (false), siis ei ole väljundist midagi näha.
+
+print(false);     // tulemust pole välundist näha
+var_dump(false);  // trükitakse bool(false)
+
+Teksti saate numbriks muuta funktsiooniga intval(). 
+Tulemuse ümardamiseks võite kasutada funktsiooni round().
+
+ Kirjutage programm, mis võtab sisendiks listi ja tagastab stringi, 
+   milles on kõik elemendid komaga eraldatuna ning seejärel teeb 
+   stringist esialgse listi tagasi. Kasutage olemasolevaid funktsioone 
+   join() ja explode().
