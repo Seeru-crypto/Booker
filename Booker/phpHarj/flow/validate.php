@@ -1,5 +1,5 @@
 <?php
-
+//http://localhost:8080/validate.php
     $input = isset($_POST['temperature'])
         ? $_POST['temperature']
         : '';
@@ -9,11 +9,7 @@
     } else if (!empty($input)) {
         $message = 'Input was: ' . $input;
     } else {
-        $message = 'Insert temperature in Celsius';
-    }
-
-?>
-
+        $message = 'Insert temperature in Celsius';}?>
 <!doctype html>
 <html lang="en">
 <head>

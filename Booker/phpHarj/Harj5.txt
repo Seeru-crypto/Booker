@@ -1,0 +1,49 @@
+Ülesannete koodi leiate Bitbucketist:
+
+git clone https://indrekots2@bitbucket.org/indrekots2/icd0007phpex.git
+
+1. Fail employees.txt sisaldab töötajate nimekirja. Andmed on kirjutatud faili järgnevas formaadis:
+
+   id;eesnimi;perekonnanimi
+
+   Töötaja andmed on üksteisest eraldatud reavahetusega.
+   
+   Lõpetage failis find.php olev funktsioon findById selliselt, et see tagastaks töötaja tema ID järgi.
+   Funktsioon peaks tagastama sõnastiku töötaja andmetest (id, eesnimi, perekonnanimi).
+   
+2. Sarnaselt eelmisele üleandele, lõpetage delete.php failis olev funktsioon selliselt, et employees.txt failis
+   kustutatakse töötaja andmed ID järgi. Funktsioon võtab argumendiks töötaja ID ning antud ID'ga töötaja andmed
+   tuleks failist eemaldada.
+   
+3. employees.txt failis on trükiviga. Töötaja ID'ga 3 andmed on valed. Kirjutage funktsioon, mis oskab muuta töötaja
+   andmeid employees.txt failis. Seejärel parandage töötaja andmed (Hans Zolo -> Han Solo).
+   
+4. Harjutustunni juurkataloogis käivitage:
+
+   php -S localhost:8080 -t ex4
+   
+   Seejärel külastage aadressi localhost:8080. Peaksite nägema töötajate listi, mis tuleb failist index.php.
+   Andut list on staatiline. Muutke index.php faili selliselt, et töötajate andmed loetakse employees.txt failist.
+   
+5. Harjutustunni juurkataloogis käivitage:
+
+   php -S localhost:8080 -t ex5
+   
+   Seejärel külastage aadressi localhost:8080. Peaksite nägema sarnast lehte nagu eelmises ülesandes. Kopeerige eelmisest
+   ülesandest funktsionaalsus töötajate listi kuvamiseks. Seejärel lisage funktsionaalsus uue töötaja lisamiseks. 
+   
+   Tekstifailis on töötajatel unikaalne ID. Mõelge, kuidas te saaksite uue töötaja lisamisel tekitata unikaalse ID.
+   
+6. Harjutustunni juurkataloogis käivitage:
+
+   php -S localhost:8080 -t ex6
+   
+   Seejärel külastage aadressi localhost:8080. Järjekordselt näete sarnast rakendust. Kopeerige eelmisest ülesandes
+   funktsionaalsus töötajate listi kuvamiseks. Seejärel oleks vaja lisada funktsionaalsus töötajate andmete muutmiseks.
+   
+   Mõelge, kuidas anda edasi edit-employee.php lehele info, millist töötajat oleks vaja muuta.
+   
+   
+Kui jääb aega üle, siis proovige lisada töötaja muutmisele valideerimine. Töötaja eesnimi ja perekonna nimi ei tohi olla tühi sõne.
+
+Ülesannete lahendus: https://www.youtube.com/watch?v=riTIQ8TRJGk

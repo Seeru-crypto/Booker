@@ -1,4 +1,11 @@
+<?php 
 
+$filePath='C:\Users\Red\Managment files\Veebitehnoloogiad_Repo\Booker\HTML_files\test.json';
+$json_string = file_get_contents( $filePath);
+$array = json_decode($json_string, true);
+
+
+?>
 
 <!DOCTYPE html>
 <html lang="et">
@@ -29,12 +36,9 @@
                   </li>
            
                   <li class="nav-item active">
-                    <a class="nav-link" href="author-list.html">Autorid</a>
+                    <a class="nav-link" href="author-list.php">Autorid</a>
                   </li>
-               
-                 
                 </ul>
-           
               </div>
             </nav>
             </div>
@@ -45,7 +49,7 @@
               <nav class="nav nav-underline">
                 <a class="nav-link text-white" href="#">Import (Excel/ CSV)</a>
                 <a class="nav-link text-white" href="#">Export</a>
-                <a class="nav-link text-white" href="author-add.html">Lisa autor</a>
+                <a class="nav-link text-white" href="author-add.php">Lisa autor</a>
               </nav>
             </div>
           </header>
@@ -56,51 +60,38 @@
          
             <table class="table table-sm table-striped"> 
               <thead> 
-                <tr> 
-                  <th data-field="firstName" style="width: auto;"> 
-                    <span class="text-primary"> 
-                      Eesnimi 
-                    </span> 
-                  </th> 
-                  <th data-field="lastName"> 
-                    <span class="text-primary"> 
-                      Perekonnnanimi  
-                    </span> 
-                  </th> 
-                  <th data-field="rating"> 
-                    <span class="text-primary">  
-                      Hinnang  
-                    </span> 
-                  </th> 
-                </tr> 
-              </thead> 
+                <tr>
+                  <th>FirstName</th>
+                  <th>LastName</th>
+                  <th>Review</th>
+                </tr>
+              </thead>
+              <tbody>
+                <?php 
+                  //$filePath='\HTML_files\test.json';
+                  
+                  $filePath='C:\Users\Red\Managment files\Veebitehnoloogiad_Repo\Booker\HTML_files\test.json';
+                  $json_string = file_get_contents( $filePath);
+                  $array = json_decode($json_string);
+                  foreach ($array as $value){?>
+                  <tr>
+                    <td><?php echo $value->firstName?></td>
+                    <td><?php echo $value->lastName?></td>
+                    <td><?php echo $value->authorReview?></td>
+                  </tr>
+                  <?php }  ?>
+
+              </tbody>
             </table> 
-         
-         
-         
-         
           </main>
-
-
-
-
-    
-
-
-
-
           <footer class="footer">
             <div class="container">
               <span class="text-muted">Fred Oja, 2021 Kevad semester</span>
             </div>
             <div class="col-md-12 text-center">
-                          <a class="btn btn-primary btn-lg"  href="jsonFiles/authors.json" role="button">Autorid</a>
+                          <a class="btn btn-primary btn-lg"  href="test.json" role="button">Autorid</a>
                           </div>>
           </footer>
-
-
-
-      
 
   <!-- Include jQuery and other required files for Bootstrap -->
   <script src= 
@@ -116,18 +107,7 @@
     <!-- Include the JavaScript file for Bootstrap table -->
     <script src="https://unpkg.com/bootstrap-table@1.18.1/dist/bootstrap-table.min.js"></script>
 
-    
-
-
-
-    <script type="text/javascript" 
-            src="jsonFiles/authors.json"> 
-    </script> 
    
-<script  type="text/javascript"
-         src="jsFiles/readJSON.js">  
-</script> 
-
 
     </body>
 </html>
