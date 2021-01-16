@@ -1,0 +1,171 @@
+
+
+<!DOCTYPE html>
+<html lang="et">
+    <head>
+         <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+   <link rel="stylesheet" type="text/css" href="">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.18.1/dist/bootstrap-table.min.css">
+<link rel="stylesheet" href="font-awesome.min.css">
+
+        <title>Raamatute nimekiri</title>
+    </head>
+    <body>
+        <header>
+            <!-- Main-navbar -->
+            <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+              <a class="navbar-brand" href="#">Booker</a>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav mr-auto">
+               
+                  <li class="nav-item active">
+                    <a class="nav-link" href="book-list.html">Raamatud <span class="sr-only">(current)</span></a>
+                  </li>
+           
+                  <li class="nav-item">
+                    <a class="nav-link" href="author-list.php">Autorid</a>
+                  </li>
+               
+                 
+                </ul>
+           
+              </div>
+            </nav>
+            <!-- Sub navbar -->
+            <div class="nav-scroller bg-secondary text-white box-shadow" style="padding-top: 55px;">
+              <nav class="nav nav-underline">
+                <a class="nav-link text-white" href="#">Import (Excel/ CSV)</a>
+                <a class="nav-link text-white" href="#">Export</a>
+                <a class="nav-link text-white" href="book-add.html">Lisa raamat</a>
+              </nav>
+            </div>
+          </header>
+
+          <main role="main" class="container" style="padding-top: 50px;">
+            <h1 >Raamatute arhiiv</h1>             
+            <!-- Search functionality -->
+
+            <div id="searchBook" class="row">
+               <div style="padding-left: 15px" data-children-count="1">
+                <select class="custom-select d-block w-30" id="SearchOption" required="">
+                  <option value="">Tiitel</option>
+                  <option>Autor</option>
+                  <option>Kirjeldus</option>
+                </select>
+                <div class="invalid-feedback">
+                  Viga
+                </div>
+              </div>
+       <!-- Search form -->
+
+    <form action="">
+          <div class="input-group mb-4">
+            <input type="search" placeholder="..." aria-describedby="button-addon5" class="form-control">
+            <div class="input-group-append">
+              <button id="button-addon5" type="submit" class="btn btn-primary"><i class="fa fa-search"></i></button>
+              <img class="iconic" data-src="envelope.svg">  
+              </div>
+          </div>
+          </form>
+
+</div>
+
+            <!-- Books tabel -->
+
+            <table class="table-striped border-success"> 
+              <thead> 
+                <tr> 
+                  <th data-field="title" style="width: auto;"> 
+                    <span class="text-primary"> 
+                      Tiitel 
+                    </span> 
+                  </th> 
+                  <th data-field="author"> 
+                    <span class="text-primary"> 
+                      Autor  
+                    </span> 
+                  </th> 
+                  <th data-field="description"> 
+                    <span class="text-primary">  
+                      Kirjeldus  
+                    </span> 
+                  </th> 
+                </tr> 
+              </thead> 
+            </table> 
+          </main>
+
+      <!-- Footer -->
+
+        <footer class="footer">
+            <div class="container">
+              <span class="text-muted">Fred Oja, 2021 Kevad semester</span>
+            </div>
+        
+
+            <div class="col-md-12 text-center">
+                          <a class="btn btn-primary btn-lg"  href="jsonFiles/books.json" role="button">Books</a>
+                          </div>>
+
+          </footer>
+
+
+  <!-- Include jQuery and other required files for Bootstrap -->
+  <script src= 
+"https://code.jquery.com/jquery-3.3.1.min.js"> 
+  </script> 
+  <script src= 
+"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"> 
+  </script> 
+  <script src= 
+"https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"> 
+  </script> 
+  
+  <!-- Include the JavaScript file for Bootstrap table -->  
+  <script src="https://unpkg.com/bootstrap-table@1.18.1/dist/bootstrap-table.min.js"></script>
+
+<!--importing icons -->> 
+  <script src="iconic.min.js"></script>
+
+  <!-- Include the file where the JSON data is stored -->
+  <script type="text/javascript" 
+          src="jsonFiles/books.json"> 
+  </script> 
+
+
+
+
+
+<!-- 
+  <script type="text/javascript"> 
+    $(document).ready(function () { 
+      // Use the given data to create  
+      // the table and display it 
+      $('table').bootstrapTable({ 
+        data: mydata 
+      }); 
+    }); 
+    // Parse the imported data as JSON 
+    // and store it 
+    var mydata = JSON.parse(book) 
+  </script> 
+  
+-->
+
+<script src="jsFiles/readJSON.js" type="text/javascript">  
+</script> 
+
+
+
+  
+  </body>
+</html>

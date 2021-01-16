@@ -1,0 +1,81 @@
+$num = '1';
+if ($num == 1) {
+ print 1;
+}
+if ($num === 1) {
+ print 2;
+}
+
+
+for ($i = 0; $i < 3; $i++) {
+ print $i . PHP_EOL;
+}
+
+
+
+$numbers = [1, 2, 3];
+foreach ($numbers as $num) {
+ print $num . PHP_EOL;
+}
+
+$numbers = [1, 2, 3];
+print $numbers; /
+
+
+<?php
+$inputTemp = 20;
+print toFahrenheit($inputTemp);
+function toFahrenheit($temp) {
+ return $temp * 9 / 5 + 32;
+}
+> php calc.php #
+
+
+
+
+flow foldri alt on PHP kullamäed
+
+.Calc näitab kuidas andmeid saata ühest saidist teise, kasutades 
+PHP post meetodit
+
+
+.Contact näitab kuidas kasutada php meetodit ilma et viiks 
+teisele php saidile. 
+
+
+.Validate näitab kuidas teha teksti sisestus veakontrolli. 
+
+
+
+    COMMAND MILLEGA PHP SERVER KÄIMA PANNA LOKAALSELT
+        NB: Pead olema õiges directoris sees.
+            Lõpus flow viitab et kõik php failid mis flows on aktiveeri. 
+
+        "php -S localhost:8080 -t flow"
+
+
+
+
+Viimane choose.php näitab et saab salvestada andmeid PHP failis ning sõltuvalt
+vaatest neid näidata või mitte näidata. 
+    Näiteks salvestab muutuja $retseptid ka näitad seda ainult retseptide lehe peal. 
+
+
+    php -S localhost:8080 -t calc
+
+
+  Stringi lõpust reavahetuse eemaldamiseks on funktsioon trim($string).
+   ja listi elementide arvu ütleb funktsioon count($list).
+
+NB! Kui Php-st printida väär väärtus (false), siis ei ole väljundist midagi näha.
+
+print(false);     // tulemust pole välundist näha
+var_dump(false);  // trükitakse bool(false)
+
+Teksti saate numbriks muuta funktsiooniga intval(). 
+Tulemuse ümardamiseks võite kasutada funktsiooni round().
+
+ Kirjutage programm, mis võtab sisendiks listi ja tagastab stringi, 
+   milles on kõik elemendid komaga eraldatuna ning seejärel teeb 
+   stringist esialgse listi tagasi. Kasutage olemasolevaid funktsioone 
+   join() ja explode().

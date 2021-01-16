@@ -1,0 +1,19 @@
+var data= `[
+    {
+      "id": "9781593275846",
+      "firstName": "Michael",
+      "lastName": "Scott",
+      "rating": "2"
+    },
+    {
+        "id": "9781593275646",
+        "firstName": "Trudy Canavan",
+        "lastName": "A Modern Introduction to Programming",
+        "rating": "5"
+    },
+    {
+        "id": "2781593275846",
+        "firstName": "J.K.",
+        "lastName": "Rowling",
+        "rating": "4"
+    } ]`;
